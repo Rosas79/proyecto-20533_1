@@ -1,0 +1,39 @@
+
+#include <Arduino.h>
+
+const int pinTemp = 35;
+float tempera;
+
+void setup() {
+  Serial.begin(115200);
+  Serial2.begin(115200);
+  //pinMode(pinTemp, INPUT);
+  randomSeed(analogRead(0)); // Inicializar la semilla aleatoria
+}
+
+void loop() {
+  // Generar un valor de temperatura aleatorio en el rango de 20 a 40 grados Celsius
+  //tempera = random(2000, 4000) / 100.0;
+
+  //Serial.print("Temperatura es: ");
+  //Serial.print(tempera);
+  //Serial.println(" °C");
+
+  //delay(1000);
+  while (Serial2.available () > 0){
+
+    tempera = Serial2.read();
+    if(tempera == 'p'  );{
+
+      Serial.println(tempera);
+
+       tempera = random(2000, 4000) / 100.0;
+
+  //Serial2.println('M;');
+  Serial2.println(tempera);
+    }
+  }
+  
+   
+  
+}
