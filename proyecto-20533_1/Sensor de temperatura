@@ -29,7 +29,7 @@ void loop() {
 
        tempera = random(2000, 4000) / 100.0;
 
-  //Serial2.println('M;');
+  //Serial2.println('p;');
   Serial2.println(tempera);
     }
   }
